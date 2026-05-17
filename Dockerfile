@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 RUN go install github.com/packwiz/packwiz@latest
-RUN PATH=/root/go/bin:$PATH
+RUN mv /root/go/bin/packwiz /usr/bin/packwiz
